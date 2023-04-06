@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:51:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/06 06:21:21 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/06 08:01:03 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,20 @@ int		check_map(t_game *game);
 int		check_positions(t_game *game);
 int		check_walls(t_game *game);
 int		searching(char *str, char *ber);
+int		handl_ber(char *str);
+int		ft_hooks(t_game *game);
+int		ft_keyhook(int keycode, t_game	*game);
+int		key_hook(int keycode, t_game *game);
+int		closing(t_game *game);
+void	move_down(t_game *game);
+void	move_up(t_game *game);
+int		checkwall2(t_game *game, int x, int y);
+int		check_back_track(t_game *game);
+int	checkifmapvalid(char **map, int x, int y, t_game *game);
+void	position_player(t_game *game);
+int checkwall(char **map,int x,int y,int *e);
+void	move_left(t_game *game);
+void	move_right(t_game *game);
 
 
 // tools headers :

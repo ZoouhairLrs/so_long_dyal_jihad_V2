@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:38:44 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/06 01:54:01 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/06 07:48:07 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,4 @@ void	setting_img(t_game *game)
 		}
 		hei++;
 	}
-	printf("hei == %d ___ wid == %d\n", hei, wid);
 }

@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:49:58 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/06 06:22:21 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/06 07:13:31 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int	main(int ac, char **av)
 			return (0);
 		create_image(&game);
 		setting_img(&game);
+		ft_hooks(&game);
 		mlx_loop(game.mlx_ptr);
 	}
 	else

@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:56:03 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/06 06:21:34 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/06 07:53:06 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,8 @@ int	check_map(t_game *game)
 	if (check_walls(game) == 0)
 		return (0);
 	if (validation_caracters(game) == 0)
+		return (0);
+	if (check_back_track(game) == 0)
 		return (0);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:49:58 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/06 01:59:12 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/06 06:22:21 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,14 @@ void	game_read(char *filename, t_game *game)
 	free(line);
 	while (line)
 	{
-		// game->hei++;
 		line = get_next_line(fd);
 		if(line)
 			game->str_line = gnl_strjoin(game->str_line, line);
 	}
-	
 	game->map = ft_split(game->str_line, '\n');
 	while (game->map[game->hei])
 		game->hei++;
 	game->wid = gnl_strlen(game->map[0]);
-	printf("width == %d ___height == %d\n", game->wid, game->hei);
 	close(fd);
 	printf("\n%s\n", game->str_line);
 }
@@ -47,11 +44,12 @@ int	main(int ac, char **av)
 	
 	if (ac == 2)
 	{
+		if(handl_ber(av[1]) == 0)
+			return (0);
 		init_stacks(&game);
 		game_read(av[1], &game);
 		if (check_map(&game) == 0)
 			return (0);
-		// printf("%s\n", game.map);
 		create_image(&game);
 		setting_img(&game);
 		mlx_loop(game.mlx_ptr);

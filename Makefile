@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/05 21:50:15 by zlaarous          #+#    #+#              #
-#    Updated: 2023/04/05 23:09:00 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/04/06 06:23:03 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS		= 		main.c \
 					check_map.c \
 					ft_message.c \
 					ft_putstr.c \
+					check_ber.c \
 
 INCLUDE 	= so_lonh.h
 

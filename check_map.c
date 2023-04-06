@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:56:03 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/06 01:41:03 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/06 06:21:34 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,9 @@ int	check_walls(t_game *game)
 	len_row = 0;
 	while (game->map[len_row])
 		len_row++;
-	printf("bdsghbdshfdhksfh\n");
 	while (game->map[i])
 	{
 		j = 0;
-		printf("%s\n", game->map[i]);
 		while (game->map[i][j])
 		{
 			if (game->map[0][j] != '1' || game->map[len_row - 1][j] != '1' || game->map[i][0] != '1' || game->map[i][len_col - 1] != '1')
@@ -40,8 +38,8 @@ int	check_walls(t_game *game)
 				
 			j++;
 		}
-		// if (j != len_col)
-		// 	return (0);
+		if (j != len_col)
+			return (0);
 		i++;
 	}
 	return (1);
@@ -76,6 +74,29 @@ int	check_positions(t_game *game)
 	return (1);
 }
 
+int	validation_caracters(t_game *game)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (game->map[i])
+	{
+		j = 0;
+		while (game->map[i][j])
+		{
+			if (game->map[i][j] != '0' && game->map[i][j] != '1' && game->map[i][j] != 'C'&& game->map[i][j] != 'E' && game->map[i][j] != 'P')
+			{
+				ft_putstr("Some caracteres is missing!");
+				return (0);
+			}
+			j++;
+		}
+		i++;
+	}
+	return (1);
+}
+
 int	check_map(t_game *game)
 {
 	int	j;
@@ -84,6 +105,8 @@ int	check_map(t_game *game)
 	if (check_positions(game) == 0)
 		return (0);
 	if (check_walls(game) == 0)
+		return (0);
+	if (validation_caracters(game) == 0)
 		return (0);
 	return (1);
 }

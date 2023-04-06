@@ -6,20 +6,20 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:18:25 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/06 07:51:41 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/06 21:21:29 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int checkwall2(t_game *game, int x, int y)
+int checkwall2(t_game *game, int y, int x)
 {
 	int static c;
-	if(game->map[x][y] == '1')
-		return 1;
-	if(game->map[x][y] == 'C')
+	if(game->map[y][x] == '1')
+		return (1);
+	if(game->map[y][x] == 'C')
 		c++;
-	if(game->map[x][y] == 'E')
+	if(game->map[y][x] == 'E')
 	{
 		if(game->num_c == c)
 		{
@@ -39,7 +39,7 @@ void	move_up(t_game *game)
 	int	c;
 
 	i = 0;
-	if(!checkwall2(game, game->P_X, game->P_Y - 1))
+	if(!checkwall2(game, game->P_Y - 1, game->P_X))
 	{
 		game->map[game->P_Y - 1][game->P_X] = 'P';
 		game->map[game->P_Y][game->P_X] = '0';

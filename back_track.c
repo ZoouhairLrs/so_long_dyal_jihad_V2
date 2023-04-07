@@ -6,13 +6,13 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:33:24 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/06 07:58:10 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/07 03:50:04 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int checkwall(char **map,int x,int y,int *e)
+int checkwall(char **map, int x, int y, int *e)
 {
 	if(map[x][y] =='1')
 		return 1;

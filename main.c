@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:49:58 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/07 01:51:58 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/07 05:07:49 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	main(int ac, char **av)
 	}
 	else
 	{
-		ft_putstr("file unreadable");
+		ft_putstr("invalid input");
 		exit(1);
 	}
 	return (0);

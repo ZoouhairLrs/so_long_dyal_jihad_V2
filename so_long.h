@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:51:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/06 08:01:03 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/07 03:52:19 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef SO_LONG_H
+#ifndef SO_LONG_H
 # define SO_LONG_H
 
 # include <stdio.h>
@@ -20,25 +20,26 @@
 # include "./get_next_line/get_next_line.h"
 # include <mlx.h>
 
-typedef struct s_game{
-	int	num_e;
-	int	num_p;
-	int	num_c;
-	int	walk_cnt;
-	int hei;
-	int wid;
-	int	P_X;
-	int	P_Y;
-	char **map;
-	char *str_line;
-	void *mlx_ptr;
-	void *mlx_win;
-	void *img_wall;
-	void *img_food;
-	void *img_player;
-	void *img4;
-	void *img_exit;
-} t_game;
+typedef struct s_game
+{
+	int		num_e;
+	int		num_p;
+	int		num_c;
+	int		walk_cnt;
+	int		hei;
+	int		wid;
+	int		P_X;
+	int		P_Y;
+	char	**map;
+	char	*str_line;
+	void	*mlx_ptr;
+	void	*mlx_win;
+	void	*img_wall;
+	void	*img_food;
+	void	*img_player;
+	void	*img4;
+	void	*img_exit;
+}t_game;
 
 //headers functions :
 void	init_stacks(t_game *game);
@@ -58,12 +59,11 @@ void	move_down(t_game *game);
 void	move_up(t_game *game);
 int		checkwall2(t_game *game, int x, int y);
 int		check_back_track(t_game *game);
-int	checkifmapvalid(char **map, int x, int y, t_game *game);
+int		checkifmapvalid(char **map, int x, int y, t_game *game);
 void	position_player(t_game *game);
-int checkwall(char **map,int x,int y,int *e);
+int		checkwall(char **map, int x, int y, int *e);
 void	move_left(t_game *game);
 void	move_right(t_game *game);
-
 
 // tools headers :
 size_t	ft_str_len_with_out_new_line(const char *s1);

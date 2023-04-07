@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:06:04 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/05 22:07:20 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/07 03:46:15 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_str_len_with_out_new_line(const char *s1)
 	j = 0;
 	while (s1[i] != '\0' && s1[i] != '\n')
 	{
-		if(s1[i] == '\n')
+		if (s1[i] == '\n')
 			j++;
 		i++;
 	}
@@ -43,7 +43,7 @@ char	*ft_str_dup_with_out_new_line(const char *s1)
 	i = 0;
 	while (s1[i] != '\0' )
 	{
-		if(s1[i] == '\n')
+		if (s1[i] == '\n')
 			i++;
 		ma[i] = s1[i];
 		i++;
@@ -57,7 +57,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	char	*str;
 	size_t	s1_len;
 	size_t	s2_len;
-	size_t new_len;
+	size_t	new_len;
 
 	if (!s1)
 	{
@@ -71,7 +71,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	s1_len = gnl_strlen(s1);
 	s2_len = gnl_strlen(s2);
 	new_len = s1_len + s2_len;
-	while(s1_len > 0 && s1[s1_len - 1] == '\n')
+	while (s1_len > 0 && s1[s1_len - 1] == '\n')
 	{
 		s1_len--;
 		new_len--;

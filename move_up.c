@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:18:25 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/06 21:21:29 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/07 01:53:03 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,4 @@ void	move_up(t_game *game)
 		setting_img(game);
 	}
 	printf("%d\n", game->walk_cnt);
-	printf("x == %d || y == %d \n",game->P_X,game->P_Y);
 }

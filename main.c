@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:49:58 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/06 07:13:31 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/07 01:51:58 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	game_read(char *filename, t_game *game)
 {
-	int	fd;
+	int		fd;
 	char	*line;
 
 	fd = open(filename, O_RDONLY);
@@ -35,7 +35,6 @@ void	game_read(char *filename, t_game *game)
 		game->hei++;
 	game->wid = gnl_strlen(game->map[0]);
 	close(fd);
-	printf("\n%s\n", game->str_line);
 }
 
 int	main(int ac, char **av)
@@ -57,7 +56,7 @@ int	main(int ac, char **av)
 	}
 	else
 	{
-		printf("file unreadable");
+		ft_putstr("file unreadable");
 		exit(1);
 	}
 	return (0);

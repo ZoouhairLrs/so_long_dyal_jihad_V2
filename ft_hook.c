@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:02:04 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/06 08:01:59 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/07 01:51:13 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	key_hook(int keycode, t_game *game)
 
 int	ft_keyhook(int keycode, t_game	*game)
 {
-	printf("%d\n",keycode);
 	if (keycode == 53)
 		closing(game);
 	else if (keycode == 13 || keycode == 126)

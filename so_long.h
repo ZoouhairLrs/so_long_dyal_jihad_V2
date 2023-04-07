@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:51:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/07 03:52:19 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/07 07:05:47 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void	position_player(t_game *game);
 int		checkwall(char **map, int x, int y, int *e);
 void	move_left(t_game *game);
 void	move_right(t_game *game);
+void	ft_message(void);
 
 // tools headers :
 size_t	ft_str_len_with_out_new_line(const char *s1);
@@ -72,5 +73,7 @@ char	*ft_strjoin(char *s1, char *s2);
 char	*ft_substr(char *s, unsigned int start, size_t len);
 char	*ft_strdup(char *s1);
 void	ft_putstr(char *str);
+void	ft_putnbr(int n);
+void	ft_putchar(char c);
 
 #endif

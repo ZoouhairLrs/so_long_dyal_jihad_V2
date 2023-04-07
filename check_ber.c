@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 06:21:54 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/07 05:09:16 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/07 06:29:12 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,9 @@ int	searching(char *str, char *ber)
 	int len;
 
 	len = gnl_strlen(str) - 1;
-	if(str[len] == 'r' && str[len - 1] == 'e' && str[len - 2] == 'b' 
-		&& str[len - 3] == '.')
-	{
-		ft_putstr("invalid map file.");
+	if(str[len] == ber[3] && str[len - 1] == ber[2] && str[len - 2] == ber[1] 
+		&& str[len - 3] == ber[0])
 		return (1);
-	}
 	return (0);
 }
 

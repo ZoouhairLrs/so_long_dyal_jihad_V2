@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:49:58 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/07 05:07:49 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/07 06:36:03 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	game_read(char *filename, t_game *game)
 
 	fd = open(filename, O_RDONLY);
 	if (fd < 0)
-		exit(1);
+		ft_message();
 	line = get_next_line(fd);
 	game->hei = 0;
 	game->str_line = ft_strdup(line);

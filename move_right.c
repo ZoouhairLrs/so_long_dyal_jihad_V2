@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:59:27 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/07 01:52:58 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/07 07:14:07 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	move_right(t_game *game)
 		game->walk_cnt++;
 		setting_img(game);
 	}
-	printf("%d\n", game->walk_cnt);
+	ft_putnbr(game->walk_cnt);
+	write(1, "\n", 1);
 }

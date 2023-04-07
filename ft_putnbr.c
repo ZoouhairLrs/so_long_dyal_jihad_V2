@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   move_left.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/06 07:59:03 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/07 07:14:00 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/04/07 06:56:57 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/04/07 07:13:31 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	move_left(t_game *game)
+void	ft_putnbr(int n)
 {
-	if(!checkwall2(game, game->P_Y, game->P_X - 1))
-	{
-		game->map[game->P_Y][game->P_X - 1] = 'P';
-		game->map[game->P_Y][game->P_X] = '0';
-		game->P_X -= 1;
-		game->walk_cnt++;
-		setting_img(game);
+	char	c;
+
+	if (n == -2147483648)
+	{	
+		write(1, "-2147483648", 11);
 	}
-	ft_putnbr(game->walk_cnt);
-	write(1, "\n", 1);
+	else if (n >= 0 && n <= 9)
+	{
+		c = n + 48;
+		ft_putchar(c);
+
+	}
+	else if (n < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr (-n);
+	}
+	else if (n > 0)
+	{
+		ft_putnbr (n / 10);
+		ft_putnbr (n % 10);
+	}
 }

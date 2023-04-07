@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/05 21:50:15 by zlaarous          #+#    #+#              #
-#    Updated: 2023/04/06 08:02:28 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/04/07 07:05:58 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,8 @@ SRCS		= 		main.c \
 					move_left.c \
 					move_right.c \
 					back_track.c \
+					ft_putnbr.c \
+					ft_putchar.c \
 
 INCLUDE 	= so_lonh.h
 

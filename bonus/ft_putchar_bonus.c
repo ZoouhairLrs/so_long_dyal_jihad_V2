@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/05 23:02:48 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/05 23:03:20 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/04/07 07:04:05 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/04/08 00:21:22 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
-void	ft_putstr(char *str)
+void	ft_putchar(char c)
 {
-	if (!str)
-		return ;
-	write(1, str, gnl_strlen(str));
+	write (1, &c, 1);
 }

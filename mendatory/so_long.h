@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:51:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/07 07:05:47 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 00:08:05 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 # define SO_LONG_H
 
 # include <stdio.h>
+# include <string.h>
 # include <fcntl.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "./get_next_line/get_next_line.h"
+# include "../get_next_line/get_next_line.h"
 # include <mlx.h>
 
 typedef struct s_game
@@ -30,6 +31,9 @@ typedef struct s_game
 	int		wid;
 	int		P_X;
 	int		P_Y;
+	int		e_x;
+	int		e_y;
+	int		c;
 	char	**map;
 	char	*str_line;
 	void	*mlx_ptr;
@@ -39,6 +43,7 @@ typedef struct s_game
 	void	*img_player;
 	void	*img4;
 	void	*img_exit;
+	void	*img_exit2;
 }t_game;
 
 //headers functions :
@@ -65,6 +70,7 @@ int		checkwall(char **map, int x, int y, int *e);
 void	move_left(t_game *game);
 void	move_right(t_game *game);
 void	ft_message(void);
+void	position_exit(t_game *game);
 
 // tools headers :
 size_t	ft_str_len_with_out_new_line(const char *s1);
@@ -75,5 +81,6 @@ char	*ft_strdup(char *s1);
 void	ft_putstr(char *str);
 void	ft_putnbr(int n);
 void	ft_putchar(char c);
+char	*ft_itoa(int n);
 
 #endif

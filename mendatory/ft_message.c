@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   closing_pross.c                                    :+:      :+:    :+:   */
+/*   ft_message.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/06 07:08:10 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/06 07:08:35 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/04/05 23:00:41 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/04/08 00:09:46 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int closing(t_game *game)
+void	ft_message(void)
 {
-	exit (0);
-	return (0);
+	ft_putstr("file unreadable!");
+	exit(0);
 }

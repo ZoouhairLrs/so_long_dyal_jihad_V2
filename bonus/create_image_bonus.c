@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_image.c                                     :+:      :+:    :+:   */
+/*   create_image_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:44:24 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/07 06:04:27 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 00:21:31 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 void	create_image(t_game *game)
 {
@@ -24,4 +24,5 @@ void	create_image(t_game *game)
 	game->img_player = mlx_xpm_file_to_image(game->mlx_ptr, "./images/player.xpm", &img_width, &img_height);
 	game->img4 = mlx_xpm_file_to_image(game->mlx_ptr, "./images/land.xpm", &img_width, &img_height);
 	game->img_exit = mlx_xpm_file_to_image(game->mlx_ptr, "./images/exit.xpm", &img_width, &img_height);
+	game->img_exit2 = mlx_xpm_file_to_image(game->mlx_ptr, "./images/exit2.xpm", &img_width, &img_height);
 }

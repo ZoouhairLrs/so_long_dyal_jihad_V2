@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   init_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/07 06:56:57 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/07 07:13:31 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/04/05 21:51:54 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/04/08 00:10:15 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	ft_putnbr(int n)
+void	init_stacks(t_game *game)
 {
-	char	c;
-
-	if (n == -2147483648)
-	{	
-		write(1, "-2147483648", 11);
-	}
-	else if (n >= 0 && n <= 9)
-	{
-		c = n + 48;
-		ft_putchar(c);
-
-	}
-	else if (n < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr (-n);
-	}
-	else if (n > 0)
-	{
-		ft_putnbr (n / 10);
-		ft_putnbr (n % 10);
-	}
+	game->num_e = 0;
+	game->num_p = 0;
+	game->num_c = 0;
+	game->hei = 0;
+	game->wid = 0;
+	game->map = 0;
+	game->c = 0;
+	game->P_X = 0;
+	game->P_Y = 0;
+	game->e_x = 0;
+	game->e_y = 0;
+	game->str_line = 0;
+	game->mlx_ptr = 0;
+	game->mlx_win = 0;
+	game->img_wall = 0;
+	game->img_food = 0;
+	game->img_player = 0;
+	game->img4 = 0;
+	game->img_exit = 0;
+	game->walk_cnt = 0;
 }

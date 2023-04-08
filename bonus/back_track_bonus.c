@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   back_track.c                                       :+:      :+:    :+:   */
+/*   back_track_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:33:24 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/07 03:50:04 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 00:21:45 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 int checkwall(char **map, int x, int y, int *e)
 {
@@ -41,6 +41,30 @@ void	position_player(t_game *game)
 			{
 				game->P_X = d;
 				game->P_Y= l;
+			}
+			d++;
+		}
+		l++;
+	}
+}
+
+void	position_exit(t_game *game)
+{
+	int l;
+	int d;
+
+	l = 0;
+	d = 0;
+	
+	while(l < game->hei)
+	{
+		d = 0;
+		while(d < game->wid)
+		{
+			if(game->map[l][d] == 'E')
+			{
+				game->e_x = d;
+				game->e_y = l;
 			}
 			d++;
 		}
@@ -93,6 +117,7 @@ int	check_back_track(t_game *game)
 	char	**map;
 	
 	position_player(game);
+	position_exit(game);
 	k = 0;
 	map = malloc(sizeof(char *) * (game->hei + 1));
 	while(k < game->hei)
@@ -103,7 +128,7 @@ int	check_back_track(t_game *game)
 	map[k] = NULL;
 	if (checkifmapvalid(map, game->P_X, game->P_Y, game) == 0)
 	{
-		printf("map not valid \n");
+		ft_putstr("map not valid \n");
 		exit(1);
 		return (0);
 	}

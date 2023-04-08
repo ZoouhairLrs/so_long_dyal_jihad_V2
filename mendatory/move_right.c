@@ -1,51 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   move_up.c                                          :+:      :+:    :+:   */
+/*   move_right.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/06 07:18:25 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/07 07:14:13 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/04/06 07:59:27 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/04/08 00:10:40 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int checkwall2(t_game *game, int y, int x)
+void	move_right(t_game *game)
 {
-	int static c;
-	if(game->map[y][x] == '1')
-		return (1);
-	if(game->map[y][x] == 'C')
-		c++;
-	if(game->map[y][x] == 'E')
+	if(!checkwall2(game, game->P_Y, game->P_X + 1))
 	{
-		if(game->num_c == c)
-		{
-			ft_putstr("win !!");
-			exit(0);
-		}
-		return(1);
-	}
-	if(x <= 0 || y <= 0 || x >= game->wid || y >= game->hei)
-		return (1);
-	return (0);
-}
-
-void	move_up(t_game *game)
-{
-	int	i;
-	int	c;
-
-	i = 0;
-	if(!checkwall2(game, game->P_Y - 1, game->P_X))
-	{
-		game->map[game->P_Y - 1][game->P_X] = 'P';
+		game->map[game->P_Y][game->P_X + 1] = 'P';
 		game->map[game->P_Y][game->P_X] = '0';
-		game->P_Y -=1;
+		game->P_X += 1;
 		game->walk_cnt++;
 		setting_img(game);
+	}
+	if (game->map[game->P_Y][game->P_X] == 'C' && game->num_c == game->c)
+	{
+		mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
+				game->img_exit2, game->e_x * 64, game->e_y * 64);
 	}
 	ft_putnbr(game->walk_cnt);
 	write(1, "\n", 1);

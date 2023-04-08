@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_stacks.c                                      :+:      :+:    :+:   */
+/*   ft_message_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/05 21:51:54 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/05 22:53:17 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/04/05 23:00:41 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/04/08 00:21:24 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
-void	init_stacks(t_game *game)
+void	ft_message(void)
 {
-	game->num_e = 0;
-	game->num_p = 0;
-	game->num_c = 0;
-	game->hei = 0;
-	game->wid = 0;
-	game->map = 0;
-	game->P_X = 0;
-	game->P_Y = 0;
-	game->str_line = 0;
-	game->mlx_ptr = 0;
-	game->mlx_win = 0;
-	game->img_wall = 0;
-	game->img_food = 0;
-	game->img_player = 0;
-	game->img4 = 0;
-	game->img_exit = 0;
-	game->walk_cnt = 0;
+	ft_putstr("file unreadable!");
+	exit(0);
 }

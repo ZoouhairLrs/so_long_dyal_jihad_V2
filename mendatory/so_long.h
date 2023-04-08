@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:51:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 00:08:05 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 02:30:00 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ typedef struct s_game
 	void	*img_player;
 	void	*img4;
 	void	*img_exit;
-	void	*img_exit2;
+	void	*img_exit4;
 }t_game;
 
 //headers functions :

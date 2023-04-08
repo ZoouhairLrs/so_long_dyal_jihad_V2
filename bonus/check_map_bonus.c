@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:56:03 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 00:21:35 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 01:31:17 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,13 @@ int	check_positions(t_game *game)
 				game->num_p++;
 			if (game->map[i][j] == 'C')
 				game->num_c++;
+			if (game->map[i][j] == 'N')
+				game->num_n++;
 			j++;
 		}
 		i++;
 	}
-	if (game->num_e != 1 || game->num_p != 1 || game->num_c == 0)
+	if (game->num_e != 1 || game->num_p != 1 || game->num_c == 0 || game->num_n == 0)
 	{
 		ft_putstr("problem caracteres!");
 		return (0);
@@ -85,7 +87,7 @@ int	validation_caracters(t_game *game)
 		j = 0;
 		while (game->map[i][j])
 		{
-			if (game->map[i][j] != '0' && game->map[i][j] != '1' && game->map[i][j] != 'C'&& game->map[i][j] != 'E' && game->map[i][j] != 'P')
+			if (game->map[i][j] != '0' && game->map[i][j] != '1' && game->map[i][j] != 'C'&& game->map[i][j] != 'E' && game->map[i][j] != 'P' && game->map[i][j] != 'N')
 			{
 				ft_putstr("Some caracteres is missing!");
 				return (0);

@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:44:24 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 00:21:31 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 03:21:25 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,7 @@ void	create_image(t_game *game)
 	game->img4 = mlx_xpm_file_to_image(game->mlx_ptr, "./images/land.xpm", &img_width, &img_height);
 	game->img_exit = mlx_xpm_file_to_image(game->mlx_ptr, "./images/exit.xpm", &img_width, &img_height);
 	game->img_exit2 = mlx_xpm_file_to_image(game->mlx_ptr, "./images/exit2.xpm", &img_width, &img_height);
+	game->img_exit3 = mlx_xpm_file_to_image(game->mlx_ptr, "./images/exit3.xpm", &img_width, &img_height);
+	game->img_exit4 = mlx_xpm_file_to_image(game->mlx_ptr, "./images/exit4.xpm", &img_width, &img_height);
+	game->img_enemy = mlx_xpm_file_to_image(game->mlx_ptr, "./images/enemy.xpm", &img_width, &img_height);
 }

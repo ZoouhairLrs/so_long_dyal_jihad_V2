@@ -6,11 +6,31 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:38:44 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 00:20:27 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 03:29:56 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
+
+void	animation(t_game *game)
+{
+	int	i;
+	
+	i = 0;
+	while (i < 50)
+	{
+		if (i <= 16)
+			mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
+				game->img_exit2, game->e_x * 64, game->e_y * 64);
+		else if (i > 16 || i <= 32)
+			mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
+				game->img_exit3, game->e_x * 64, game->e_y * 64);
+		else if (i > 32 || i <= 50)
+			mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
+				game->img_exit4, game->e_x * 64, game->e_y * 64);
+		i++;
+	}
+}
 
 void	draw_image(t_game *game, int wid, int hei)
 {
@@ -26,13 +46,15 @@ void	draw_image(t_game *game, int wid, int hei)
 	else if (game->map[hei][wid] == 'E')
 		mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
 			game->img_exit, wid * 64, hei * 64);
+	else if (game->map[hei][wid] == 'N')
+		mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
+			game->img_enemy, wid * 64, hei * 64);
 	else
 		mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
 			game->img4, wid * 64, hei * 64);
 	if (game->num_c == game->c)
 	{
-		mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
-				game->img_exit2, game->e_x * 64, game->e_y * 64);
+		animation(game);
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:18:25 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 00:20:49 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 01:33:17 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ int checkwall2(t_game *game, int y, int x)
 {		
 	if(game->map[y][x] == '1')
 		return (1);
+	if(game->map[y][x] == 'N')
+	{
+			ft_putstr("loser !!");
+			exit(0);
+	}
 	if(game->map[y][x] == 'C')
 	{
 		game->c++;

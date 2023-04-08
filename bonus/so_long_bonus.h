@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:51:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 00:20:20 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 02:52:07 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_game
 	int		num_e;
 	int		num_p;
 	int		num_c;
+	int		num_n;
 	int		walk_cnt;
 	int		hei;
 	int		wid;
@@ -41,9 +42,12 @@ typedef struct s_game
 	void	*img_wall;
 	void	*img_food;
 	void	*img_player;
+	void	*img_enemy;
 	void	*img4;
 	void	*img_exit;
 	void	*img_exit2;
+	void	*img_exit3;
+	void	*img_exit4;
 }t_game;
 
 //headers functions :

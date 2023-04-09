@@ -6,11 +6,11 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/05 21:50:15 by zlaarous          #+#    #+#              #
-#    Updated: 2023/04/08 00:35:08 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/04/09 19:48:03 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= so_long
+NAME			= so_long
 BONUS_NAME		= so_long_bonus
 
 SRCS		= 		./mendatory/main.c \

@@ -6,14 +6,14 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/05 21:50:15 by zlaarous          #+#    #+#              #
-#    Updated: 2023/04/09 19:48:03 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/04/09 19:48:25 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			= so_long
 BONUS_NAME		= so_long_bonus
 
-SRCS		= 		./mendatory/main.c \
+SRCS			= 	./mendatory/main.c \
 					./get_next_line/get_next_line.c \
 					./get_next_line/get_next_line_utils.c \
 					./mendatory/init_stacks.c\

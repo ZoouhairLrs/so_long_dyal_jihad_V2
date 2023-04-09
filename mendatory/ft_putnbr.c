@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 06:56:57 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 00:09:58 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 20:57:27 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	ft_putnbr(int n)
 	{
 		c = n + 48;
 		ft_putchar(c);
-
 	}
 	else if (n < 0)
 	{

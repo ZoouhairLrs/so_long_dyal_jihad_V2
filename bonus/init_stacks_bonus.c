@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:51:54 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 00:21:06 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 20:41:02 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	init_stacks(t_game *game)
 	game->wid = 0;
 	game->map = 0;
 	game->c = 0;
-	game->P_X = 0;
-	game->P_Y = 0;
+	game->p_x = 0;
+	game->p_y = 0;
 	game->e_x = 0;
 	game->e_y = 0;
 	game->str_line = 0;

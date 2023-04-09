@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:51:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 02:30:00 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 20:37:57 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ typedef struct s_game
 	int		walk_cnt;
 	int		hei;
 	int		wid;
-	int		P_X;
-	int		P_Y;
+	int		p_x;
+	int		p_y;
 	int		e_x;
 	int		e_y;
 	int		c;

@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:38:44 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 01:16:15 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 20:53:48 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ void	draw_image(t_game *game, int wid, int hei)
 
 void	setting_img(t_game *game)
 {
-	int	hei;
-	int	wid;
-	char *str;
+	int		hei;
+	int		wid;
+	char	*str;
 
 	hei = 0;
 	while (hei < game->hei)

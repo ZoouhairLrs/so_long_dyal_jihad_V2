@@ -6,13 +6,13 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:08:10 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 00:21:33 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 21:21:39 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
 
-int closing(t_game *game)
+int	closing(t_game *game)
 {
 	exit (0);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:02:04 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 01:19:32 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 21:20:46 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_keyhook(int keycode, t_game	*game)
 
 int	ft_hooks(t_game *game)
 {
-	mlx_hook(game->mlx_win, 2, (1L<<0), &key_hook, game);
+	mlx_hook(game->mlx_win, 2, (1L << 0), &key_hook, game);
 	mlx_hook(game->mlx_win, 17, 0, &closing, game);
 	return (0);
 }

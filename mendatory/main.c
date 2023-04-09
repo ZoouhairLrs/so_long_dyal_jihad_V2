@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:49:58 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 00:10:22 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 22:34:05 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	game_read(char *filename, t_game *game)
 	while (line)
 	{
 		line = get_next_line(fd);
-		if(line)
+		if (line)
 			game->str_line = gnl_strjoin(game->str_line, line);
 	}
 	game->map = ft_split(game->str_line, '\n');
@@ -40,10 +40,10 @@ void	game_read(char *filename, t_game *game)
 int	main(int ac, char **av)
 {
 	t_game	game;
-	
+
 	if (ac == 2)
 	{
-		if(handl_ber(av[1]) == 0)
+		if (handl_ber(av[1]) == 0)
 			return (0);
 		init_stacks(&game);
 		game_read(av[1], &game);

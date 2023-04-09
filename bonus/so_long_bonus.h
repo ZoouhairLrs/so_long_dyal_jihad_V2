@@ -6,12 +6,12 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:51:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 02:52:07 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/08 21:17:00 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H_BONUS
-# define SO_LONG_H_BONUS
+#ifndef SO_LONG_BONUS_H
+# define SO_LONG_BONUS_H
 
 # include <stdio.h>
 # include <string.h>
@@ -30,8 +30,8 @@ typedef struct s_game
 	int		walk_cnt;
 	int		hei;
 	int		wid;
-	int		P_X;
-	int		P_Y;
+	int		p_x;
+	int		p_y;
 	int		e_x;
 	int		e_y;
 	int		c;

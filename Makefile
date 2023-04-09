@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/05 21:50:15 by zlaarous          #+#    #+#              #
-#    Updated: 2023/04/09 19:48:25 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/04/09 19:48:52 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,16 +59,16 @@ SRCS_BONUS		= 		./bonus/so_long_bonus.c \
 						./bonus/ft_putchar_bonus.c \
 						./bonus/ft_itoa_bonus.c \
 
-INCLUDE 	= mendatory/so_lonh.h
+INCLUDE 	  	= mendatory/so_lonh.h
 
-INCLUDE_BONUS = mendatory/so_long_bonus.h
+INCLUDE_BONUS 	= mendatory/so_long_bonus.h
 
-OBJS		= $(SRCS:.c=.o)
+OBJS			= $(SRCS:.c=.o)
 OBJS_BONUS		= $(SRCS_BONUS:.c=.o)
 
-FLAG = -Wall -Wextra -Werror
+FLAG 			= -Wall -Wextra -Werror
 
-SUPER_FLAG =  -I /usr/X11/include -l mlx -framework OpenGL -framework AppKit
+SUPER_FLAG 		=  -I /usr/X11/include -l mlx -framework OpenGL -framework AppKit
 
 %.o: %.c $(INCLUDE)
 	$(CC) $(FLAG) -Imlx -c $< -o $@

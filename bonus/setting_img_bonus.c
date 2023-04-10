@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:38:44 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 21:18:03 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/10 05:33:50 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,8 @@
 
 void	animation(t_game *game)
 {
-	int	i;
-
-	i = 0;
-	while (i < 50)
-	{
-		if (i <= 16)
-			mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
-				game->img_exit2, game->e_x * 64, game->e_y * 64);
-		else if (i > 16 || i <= 32)
-			mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
-				game->img_exit3, game->e_x * 64, game->e_y * 64);
-		else if (i > 32 || i <= 50)
-			mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
-				game->img_exit4, game->e_x * 64, game->e_y * 64);
-		i++;
-	}
+	mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
+			game->img_exit4, game->e_x * 64, game->e_y * 64);
 }
 
 void	draw_image(t_game *game, int wid, int hei)

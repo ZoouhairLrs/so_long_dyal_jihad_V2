@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:51:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 21:17:00 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/10 05:30:27 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ typedef struct s_game
 	void	*img_wall;
 	void	*img_food;
 	void	*img_player;
+	void	*img_player2;
 	void	*img_enemy;
 	void	*img4;
 	void	*img_exit;

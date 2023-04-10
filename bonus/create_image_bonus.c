@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:44:24 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/10 01:15:06 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/10 05:30:57 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	create_image(t_game *game)
 			"./images/food.xpm", &img_width, &img_height);
 	game->img_player = mlx_xpm_file_to_image(game->mlx_ptr,
 			"./images/player.xpm", &img_width, &img_height);
+	game->img_player2 = mlx_xpm_file_to_image(game->mlx_ptr,
+			"./images/leftplayer.xpm", &img_width, &img_height);
 	game->img4 = mlx_xpm_file_to_image(game->mlx_ptr,
 			"./images/land.xpm", &img_width, &img_height);
 	game->img_exit = mlx_xpm_file_to_image(game->mlx_ptr,

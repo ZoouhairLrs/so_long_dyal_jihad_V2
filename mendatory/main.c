@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:49:58 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/10 00:26:36 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/10 05:42:33 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	main(int ac, char **av)
 	}
 	else
 	{
-		ft_putstr("invalid input");
+		ft_putstr("Error!");
 		exit(1);
 	}
 	return (0);

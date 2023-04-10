@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 06:21:54 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 21:07:55 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/10 05:42:46 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	handl_ber(char *str)
 {
 	if (searching(str, ".ber") == 0)
 	{
-		ft_putstr ("map extansion is not .ber Grrr.");
+		ft_putstr ("Error!");
 		return (0);
 	}
 	return (1);

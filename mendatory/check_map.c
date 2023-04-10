@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:56:03 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/10 00:27:02 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/10 05:44:25 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	check_walls(t_game *game)
 			if (game->map[0][j] != '1' || game->map[len_row - 1][j] != '1' ||
 					game->map[i][0] != '1' || game->map[i][len_col - 1] != '1')
 			{
-				ft_putstr("invalid map!");
+				ft_putstr("Error!\ninvalid map!");
 				return (0);
 			}
 			j++;
@@ -68,7 +68,7 @@ int	check_positions(t_game *game)
 	}
 	if (game->num_e != 1 || game->num_p != 1 || game->num_c == 0)
 	{
-		ft_putstr("problem caracteres!");
+		ft_putstr("Error! \nproblem caractere");
 		return (0);
 	}
 	return (1);
@@ -89,7 +89,7 @@ int	validation_caracters(t_game *game)
 					&& game->map[i][j] != 'C'
 					&& game->map[i][j] != 'E' && game->map[i][j] != 'P')
 			{
-				ft_putstr ("Some caracteres is missing!");
+				ft_putstr ("Error!\nSome caracteres is missing!");
 				return (0);
 			}
 			j++;

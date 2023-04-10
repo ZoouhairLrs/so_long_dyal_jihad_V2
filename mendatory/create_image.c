@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:44:24 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/10 00:53:30 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/10 05:45:25 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	create_image(t_game *game)
 	int	img_width;
 	int	img_height;
 
-	printf("here!\n");
 	game->mlx_ptr = mlx_init();
 	if (!game->mlx_ptr)
 		exit(0);

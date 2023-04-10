@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:33:24 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/10 01:13:43 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/10 05:45:22 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,6 @@ int	checkifmapvalid(char **map, int x, int y, t_game *game)
 		if (checkifmapvalid(map, x, y + 1, game) == 1)
 			return (1);
 	}
-	printf("%d\n", game->e_x);
 	if (c == game->num_c && e > 0)
 		return (1);
 	if (checkwall(map, x, y - 1, &e) == 0)
@@ -127,7 +126,7 @@ int	check_back_track(t_game *game)
 	map[k] = NULL;
 	if (checkifmapvalid(map, game->p_x, game->p_y, game) == 0)
 	{
-		ft_putstr("map not valid \n");
+		ft_putstr("Error!\nmap not valid \n");
 		exit(1);
 		return (0);
 	}

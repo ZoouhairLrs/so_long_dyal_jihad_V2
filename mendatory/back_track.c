@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:33:24 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 22:34:53 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/10 01:13:43 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	checkwall(char **map, int x, int y, int *e)
 {
-	if (map[x][y] == '1')
+	if (map[y][x] == '1')
 		return (1);
-	if (map[x][y] == 'E')
+	if (map[y][x] == 'E')
 	{
 		*e += 1;
 		return (1);
@@ -75,14 +75,15 @@ int	checkifmapvalid(char **map, int x, int y, t_game *game)
 	static int	c;
 	static int	e;
 
-	if (map[x][y] == 'C')
+	if (map[y][x] == 'C')
 		c++;
-	map[x][y] = '1';
+	map[y][x] = '1';
 	if (checkwall(map, x, y + 1, &e) == 0)
 	{
 		if (checkifmapvalid(map, x, y + 1, game) == 1)
 			return (1);
 	}
+	printf("%d\n", game->e_x);
 	if (c == game->num_c && e > 0)
 		return (1);
 	if (checkwall(map, x, y - 1, &e) == 0)

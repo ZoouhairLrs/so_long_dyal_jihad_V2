@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:59:03 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 21:20:15 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/10 01:17:16 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void	move_left(t_game *game)
 		setting_img(game);
 		ft_putnbr(game->walk_cnt);
 		write(1, "\n", 1);
-	}
-	if (game->map[game->p_y][game->p_x] == 'C' && game->num_c == game->c)
-	{
-		mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
-			game->img_exit2, game->e_x * 64, game->e_y * 64);
+		if (game->map[game->p_y][game->p_x] == 'C' && game->num_c == game->c)
+		{
+			mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
+				game->img_exit2, game->e_x * 64, game->e_y * 64);
+		}
 	}
 }

@@ -6,11 +6,28 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:49:58 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/10 06:21:23 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/11 20:54:24 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+void	ft__while(t_game *game, char *line)
+{
+	int	i;
+
+	while (line)
+	{
+		i = 0;
+		while (line[i] != '\0' && line[i] != '\n')
+			i++;
+		if (i != game->wid)
+		{
+			free(line);
+			ft_message();
+		}
+	}
+}
 
 void	game_read(char *filename, t_game *game)
 {
@@ -27,6 +44,7 @@ void	game_read(char *filename, t_game *game)
 	while (line)
 	{
 		line = get_next_line(fd);
+		// ft__while(game, line);
 		if (line)
 			game->str_line = gnl_strjoin(game->str_line, line);
 	}

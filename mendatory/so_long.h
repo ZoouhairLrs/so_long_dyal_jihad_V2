@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:51:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 20:37:57 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/11 05:10:04 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,6 @@ void	ft_putstr(char *str);
 void	ft_putnbr(int n);
 void	ft_putchar(char c);
 char	*ft_itoa(int n);
+
 
 #endif

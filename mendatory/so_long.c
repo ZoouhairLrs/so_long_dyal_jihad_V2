@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:49:58 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/11 22:04:35 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/12 01:29:04 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	game_read(char *filename, t_game *game)
 	free(line);
 	while (line)
 	{
+		if (line[0] == '\n' && line[1] == '\0')
+			ft_message();
 		line = get_next_line(fd);
 		if (line)
 			game->str_line = gnl_strjoin(game->str_line, line);

@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 23:00:41 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 00:21:24 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/12 01:37:36 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_message(void)
 {
-	ft_putstr("file unreadable!");
+	ft_putstr("Error!");
 	exit(0);
 }

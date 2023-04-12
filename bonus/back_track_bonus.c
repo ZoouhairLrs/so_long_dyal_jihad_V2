@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:33:24 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/12 01:04:03 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/12 06:28:30 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,10 +111,13 @@ int	check_back_track(t_game *game)
 	}
 	map[k] = NULL;
 	if (checkifmapvalid(map, game->p_x, game->p_y, game) == 0)
+		ft_message();
+	k = 0;
+	while (k < game->hei)
 	{
-		ft_putstr ("map not valid \n");
-		exit(1);
-		return (0);
+		free(map[k]);
+		k++;
 	}
+	free(map);
 	return (1);
 }

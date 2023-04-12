@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:33:24 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/12 00:59:23 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/12 06:15:15 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,8 @@ int	check_back_track(t_game *game)
 	position_exit(game);
 	k = 0;
 	map = malloc(sizeof(char *) * (game->hei + 1));
+	if (!map)
+		return (0);
 	while (k < game->hei)
 	{
 		map[k] = ft_strdup(game->map[k]);
@@ -111,10 +113,13 @@ int	check_back_track(t_game *game)
 	}
 	map[k] = NULL;
 	if (checkifmapvalid(map, game->p_x, game->p_y, game) == 0)
+		ft_message();
+	k = 0;
+	while (k < game->hei)
 	{
-		ft_putstr("Error!\nmap not valid \n");
-		exit(1);
-		return (0);
+		free(map[k]);
+		k++;
 	}
+	free(map);
 	return (1);
 }

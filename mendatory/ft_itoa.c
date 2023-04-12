@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 20:51:37 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 00:09:38 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/12 06:27:38 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_itoa(int n)
 	len = len_num(nb);
 	str = malloc(sizeof(char) * len + 1);
 	if (!(str))
-		return (NULL);
+		return (free(str), NULL);
 	if (nb < 0)
 	{
 		str[0] = '-';

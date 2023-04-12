@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:49:58 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/12 01:29:04 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/12 06:14:51 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	game_read(char *filename, t_game *game)
 		line = get_next_line(fd);
 		if (line)
 			game->str_line = gnl_strjoin(game->str_line, line);
+		free(line);
 	}
 	game->map = ft_split(game->str_line, '\n');
 	while (game->map[game->hei])
@@ -54,6 +55,7 @@ int	main(int ac, char **av)
 		create_image(&game);
 		setting_img(&game);
 		ft_hooks(&game);
+		system("leaks so_long");
 		mlx_loop(game.mlx_ptr);
 	}
 	else

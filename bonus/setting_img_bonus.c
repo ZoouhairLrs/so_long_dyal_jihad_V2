@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:38:44 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/12 00:59:50 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/12 06:30:05 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,5 @@ void	setting_img(t_game *game)
 	str = ft_itoa(game->walk_cnt);
 	mlx_string_put(game->mlx_ptr, game->mlx_win, 10, 30, 0xccccff, "moves:");
 	mlx_string_put(game->mlx_ptr, game->mlx_win, 70, 30, 0xccccff, str);
+	free(str);
 }

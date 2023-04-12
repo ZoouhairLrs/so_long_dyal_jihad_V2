@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:33:24 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/10 05:45:22 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/12 00:59:23 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,34 +78,20 @@ int	checkifmapvalid(char **map, int x, int y, t_game *game)
 	if (map[y][x] == 'C')
 		c++;
 	map[y][x] = '1';
+	if (c == game->num_c && e > 0)
+		return (1);
 	if (checkwall(map, x, y + 1, &e) == 0)
-	{
 		if (checkifmapvalid(map, x, y + 1, game) == 1)
 			return (1);
-	}
-	if (c == game->num_c && e > 0)
-		return (1);
 	if (checkwall(map, x, y - 1, &e) == 0)
-	{
 		if (checkifmapvalid(map, x, y - 1, game) == 1)
 			return (1);
-	}
-	if (c == game->num_c && e > 0)
-		return (1);
 	if (checkwall(map, x + 1, y, &e) == 0)
-	{
 		if (checkifmapvalid(map, x + 1, y, game) == 1)
 			return (1);
-	}
-	if (c == game->num_c && e > 0)
-		return (1);
 	if (checkwall(map, x - 1, y, &e) == 0)
-	{
 		if (checkifmapvalid(map, x - 1, y, game) == 1)
 			return (1);
-	}
-	if (c == game->num_c && e > 0)
-		return (1);
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:06:04 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/08 00:20:35 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/11 22:26:10 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*ft_str_dup_with_out_new_line(const char *s1)
 	int		len;
 	int		i;
 
+	if (!s1)
+		return (ft_putstr("Error!"), NULL);
 	len = ft_str_len_with_out_new_line(s1) + 1;
 	ma = malloc(sizeof (char) * len);
 	if (ma == NULL)
@@ -50,38 +52,6 @@ char	*ft_str_dup_with_out_new_line(const char *s1)
 	}
 	ma[i] = '\0';
 	return (ma);
-}
-
-char	*ft_strjoin(char *s1, char *s2)
-{
-	char	*str;
-	size_t	s1_len;
-	size_t	s2_len;
-	size_t	new_len;
-
-	if (!s1)
-	{
-		s1 = malloc(1 * sizeof(char));
-		if (!s1)
-			return (free(s1), NULL);
-		s1[0] = '\0';
-	}
-	if (!s2)
-		return (free(s1), NULL);
-	s1_len = gnl_strlen(s1);
-	s2_len = gnl_strlen(s2);
-	new_len = s1_len + s2_len;
-	while (s1_len > 0 && s1[s1_len - 1] == '\n')
-	{
-		s1_len--;
-		new_len--;
-	}
-	str = malloc(sizeof(char) * (new_len + 1));
-	if (str == NULL)
-		return (free(s1), NULL);
-	gnl_strlcpy(str, s1, s1_len);
-	gnl_strlcat(str + s1_len, s2, s2_len);
-	return (free(s1), str);
 }
 
 char	*ft_substr(char *s, unsigned int start, size_t len)

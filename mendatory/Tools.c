@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:06:04 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/09 19:57:48 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/11 21:47:59 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,11 @@ char	*ft_strdup(char *s1)
 	int		len;
 	int		i;
 
+	if (!s1)
+	{
+		ft_putstr("Error!");
+		return (0);
+	}
 	len = gnl_strlen(s1) + 1;
 	ma = malloc(sizeof (char) * len);
 	if (ma == NULL)

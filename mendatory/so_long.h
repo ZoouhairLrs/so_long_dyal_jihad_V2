@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:51:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/11 05:10:04 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/11 22:21:15 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,10 @@ void	init_stacks(t_game *game);
 char	**ft_split(char *s, char c);
 void	setting_img(t_game *game);
 void	create_image(t_game *game);
+void	create_image2(t_game *game);
 int		check_map(t_game *game);
 int		check_positions(t_game *game);
+void	ft_check_position2(t_game *game, int i, int j);
 int		check_walls(t_game *game);
 int		searching(char *str, char *ber);
 int		handl_ber(char *str);
@@ -82,6 +84,5 @@ void	ft_putstr(char *str);
 void	ft_putnbr(int n);
 void	ft_putchar(char c);
 char	*ft_itoa(int n);
-
 
 #endif

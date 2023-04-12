@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:56:03 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/10 05:44:25 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/11 22:12:26 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,27 +20,20 @@ int	check_walls(t_game *game)
 	int	len_row;
 
 	len_col = gnl_strlen(game->map[0]);
-	i = 0;
-	j = 0;
+	i = -1;
 	len_row = 0;
 	while (game->map[len_row])
 		len_row++;
-	while (game->map[i])
+	while (game->map[++i])
 	{
 		j = 0;
 		while (game->map[i][j])
 		{
 			if (game->map[0][j] != '1' || game->map[len_row - 1][j] != '1' ||
 					game->map[i][0] != '1' || game->map[i][len_col - 1] != '1')
-			{
-				ft_putstr("Error!\ninvalid map!");
-				return (0);
-			}
+				return (ft_putstr("Error!\ninvalid map!"), 0);
 			j++;
 		}
-		if (j != len_col)
-			return (0);
-		i++;
 	}
 	return (1);
 }
@@ -50,8 +43,8 @@ int	check_positions(t_game *game)
 	int	i;
 	int	j;
 
-	i = 0;
-	while (game->map[i])
+	i = -1;
+	while (game->map[++i])
 	{
 		j = 0;
 		while (game->map[i][j])
@@ -64,13 +57,9 @@ int	check_positions(t_game *game)
 				game->num_c++;
 			j++;
 		}
-		i++;
 	}
 	if (game->num_e != 1 || game->num_p != 1 || game->num_c == 0)
-	{
-		ft_putstr("Error! \nproblem caractere");
-		return (0);
-	}
+		return (ft_putstr("Error! \nproblem caractere"), 0);
 	return (1);
 }
 

@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 07:59:03 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/10 05:36:44 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/11 21:52:06 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ void	move_left(t_game *game)
 		ft_putnbr(game->walk_cnt);
 		write(1, "\n", 1);
 		mlx_put_image_to_window(game->mlx_ptr, game->mlx_win,
-				game->img_player2, game->p_x * 64, game->p_y * 64);
+			game->img_player2, game->p_x * 64, game->p_y * 64);
 	}
 }
